@@ -86,13 +86,20 @@ let s:warningicon = ""
 if filereadable(g:errormarker_warningicon)
     let s:warningicon = " icon=" . escape(g:errormarker_warningicon, '| \')
 endif
+
+"execute "sign define errormarker_error text=" . g:errormarker_errortext .
+"            \ " linehl=" . g:errormarker_errorgroup .
+"            \ " texthl=" . g:errormarker_errortextgroup .
+"            \ s:erroricon
 execute "sign define errormarker_error text=" . g:errormarker_errortext .
-            \ " linehl=" . g:errormarker_errorgroup .
             \ " texthl=" . g:errormarker_errortextgroup .
             \ s:erroricon
 
+"execute "sign define errormarker_warning text=" . g:errormarker_warningtext .
+"            \ " linehl=" . g:errormarker_warninggroup .
+"            \ " texthl=" . g:errormarker_warningtextgroup .
+"            \ s:warningicon
 execute "sign define errormarker_warning text=" . g:errormarker_warningtext .
-            \ " linehl=" . g:errormarker_warninggroup .
             \ " texthl=" . g:errormarker_warningtextgroup .
             \ s:warningicon
 
